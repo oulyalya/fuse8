@@ -1,0 +1,58 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: max-content;
+  margin-left: -22px;
+  padding: 11px 32px 13px;
+
+  @include font(16px, 1.5, $bold);
+  letter-spacing: -0.3px;
+  color: $c_text;
+  border: 1px solid $c_border;
+  border-radius: 25px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: 0 none;
+    opacity: 0.8;
+    border: 1px solid $c_text;
+  }
+
+  &:active {
+    outline: 0 none;
+    opacity: 0.6;
+    border: 1px solid $c_text;
+  }
+}
+
+.btn--icon {
+  padding-right: 28px;
+}
+
+.btn--icon span {
+  position: relative;
+  padding-right: 17px;
+}
+
+.btn--icon span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 4px;
+  display: block;
+  width: 10px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @include mobile {
+    width: 9px;
+    height: 17px;
+  }
+}
+
+.btn--arrow span::after {
+  background-size: 10px 18px;
+  background-image: url("../img/chevron.svg");
+}

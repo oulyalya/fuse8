@@ -1,0 +1,61 @@
+.houses__container {
+  padding-top: 35px;
+  padding-bottom: 100px;
+}
+
+.houses h1 {
+  margin-top: 0;
+  margin-left: -22px;
+
+  @include font(36px, 1.36, $bold);
+  color: $c_title;
+  text-align: center;
+
+  @include mobile {
+    margin-left: 0;
+    font-size: 28px;
+  }
+}
+
+.houses__filter {
+  width: 474px;
+  margin-top: 47px;
+  margin-bottom: 47px;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.houses__cards-wrapper {
+  @include flex(row);
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.houses__cards-wrapper article {
+  width: calc(100% / 3);
+  margin-bottom: 38px;
+
+  @include tablet {
+    width: calc(100% / 2);
+  }
+
+  @include mobile {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.houses__see-more {
+  margin-top: 23px;
+  text-align: center;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fuse8</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <section class="houses">
+    <div class="houses__container container">
+      <h1>Our Latest Developments</h1>
+      <div class="houses__filter filter">
+        <div>
+          <label for="search">Filter</label>
+          <input id="search" type="search">
+        </div>
+      </div>
+      <div class="houses__cards-wrapper">
+        <!-- insert cards here -->
+      </div>
+      <div class="houses__see-more">
+        <a class="btn btn--icon btn--arrow" href="#"><span>See more</span></a>
+      </div>
+    </div>
+  </section>
+
+  <template class="card">
+    <a href="/details/[id]">
+      <div class="card__img-wrapper">
+        <img src="" alt="" width="377" height="227">
+        <span>лейбл</span>
+      </div>
+      <div class="card__info-wrapper">
+        <h2>title</h2>
+        <p>19-23 Cambridge Road, Southport</p>
+        <p>New Properties for Sale from <b>£214,999</b></p>
+        <small>Shared Ownership Available</small>
+      </div>
+    </a>
+  </template>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

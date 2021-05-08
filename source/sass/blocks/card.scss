@@ -1,0 +1,66 @@
+.card {
+  --half-gap: 10px;
+  width: calc(379px + (2 * var(--half-gap)));
+  padding-left: var(--half-gap);
+  padding-right: var(--half-gap);
+}
+
+.card a {
+  display: block;
+  color: $c_text;
+  border: 1px solid $c_border;
+  background-color: $c_bg;
+}
+
+.card__img-wrapper {
+  position: relative;
+}
+
+.card__img-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.card .card__img-wrapper > span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  display: block;
+  padding: 6px 11px;
+
+  @include font(12px, 1.35, $bold);
+  color: white;
+}
+
+.card--independent .card__img-wrapper > span {
+  background-color: $c_accent-dark;
+}
+
+.card--support .card__img-wrapper > span {
+  background-color: $c_accent-light;
+}
+
+.card__info-wrapper {
+  padding: 20px 20px 14px;
+}
+
+.card__info-wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include font(20px, 1.36, $bold);
+}
+
+.card__info-wrapper h2 + p {
+  margin-top: 5px;
+}
+
+.card__info-wrapper p:last-of-type {
+  margin-bottom: 5px;
+}
+
+.card small {
+  margin-top: 0;
+  font-size: 14px;
+}

@@ -1,0 +1,65 @@
+@mixin tablet {
+  @media (min-width: $tab_min) and (max-width: $tab_max) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: 0) and (max-width: $tab_min) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+    @content;
+  }
+}
+
+@mixin flex($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
+
+@mixin container {
+  position: relative;
+  width: auto;
+  min-width: $desk_min;
+  max-width: $desk_max;
+  margin: 0 auto;
+  padding: 0 $desk_pads;
+
+  @include tablet {
+    min-width: $tab_min;
+    width: auto;
+    padding: 0 $tab_pads;
+    overflow-x: hidden;
+  }
+
+  @include mobile {
+    min-width: $mob_min;
+    width: 100%;
+    padding: 0 $mob_pads;
+    overflow-x: hidden;
+  }
+}
+
+@mixin font($size, $height, $weight) {
+  font-family: $font_main;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}

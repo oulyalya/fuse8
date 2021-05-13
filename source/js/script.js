@@ -60,6 +60,9 @@ getResource('https://603e38c548171b0017b2ecf7.mockapi.io/homes')
     data.forEach(({ id, title, address, type, price }) => {
       new Card(id, title, address, type, price, '.houses__cards-wrapper').render();
     });
+  })
+  .catch(() => {
+    document.querySelector('.houses__cards-wrapper').textContent = 'Oops... something went wrong';
   });
 
 
